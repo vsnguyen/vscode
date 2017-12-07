@@ -1,0 +1,75 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const keywords = [
+    'ns',
+    'fn',
+    'def',
+    'defn',
+    'bound\\-fn',
+    'if',
+    'if\\-not',
+    'case,',
+    'cond',
+    'condp',
+    'cond\\-\\>',
+    'cond\\-\\>\\>',
+    'when',
+    'while',
+    'when\\-not',
+    'when\\-first',
+    'do',
+    'future',
+    'comment',
+    'doto',
+    'locking',
+    'proxy',
+    'as\\-\\>',
+    'reify',
+    'deftype',
+    'defrecord',
+    'defprotocol',
+    'extend',
+    'extend-protocol',
+    'extend-type',
+    'specify',
+    'specify\\!',
+    'try',
+    'catch',
+    'finally',
+    'let',
+    'letfn',
+    'binding',
+    'loop',
+    'for',
+    'doseq',
+    'dotimes',
+    'when\\-let',
+    'if\\-let',
+    'when\\-some',
+    'if\\-some',
+    'this\\-as',
+    'defmethod',
+    'testing',
+    'deftest',
+    'are',
+    'use\\-fixtures',
+    'run',
+    'run\\*',
+    'fresh',
+    'alt!',
+    'alt!!',
+    'go',
+    'go\\-loop',
+    'thread',
+];
+class ClojureLanguageConfiguration {
+    constructor() {
+        this.wordPattern = /[\w\-\.:<>\*][\w\d\.\\/\-\?<>\*!]+/;
+        this.indentationRules = {
+            decreaseIndentPattern: undefined,
+            increaseIndentPattern: /^\s*\(.*[^)]\s*$/
+        };
+    }
+}
+exports.ClojureLanguageConfiguration = ClojureLanguageConfiguration;
+//# sourceMappingURL=clojureConfiguration.js.map

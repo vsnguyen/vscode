@@ -1,0 +1,47 @@
+{
+	"name": "LogFileHighlighter",
+	"displayName": "Log File Highlighter",
+	"icon": "content/appicon.png",
+	"description": "Adds color highlighting to log files to make it easier to follow the flow of log events and identify problems.",
+	"categories": [
+		"Other"
+	],
+	"version": "1.2.0",
+	"bugs": {
+		"url": "https://github.com/emilast/vscode-logfile-highlighter/issues"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/emilast/vscode-logfile-highlighter.git"
+	},
+	"engines": {
+		"vscode": "^1.15.0"
+	},
+	"publisher": "emilast",
+	"contributes": {
+		"languages": [
+			{
+				"id": "log",
+				"aliases": [
+					"Log File",
+					"log"
+				],
+				"extensions": [
+					".log"
+				]
+			}
+		],
+		"grammars": [
+			{
+				"language": "log",
+				"scopeName": "text.log",
+				"path": "./syntaxes/log.tmLanguage"
+			}
+		]
+	},
+	"__metadata": {
+		"id": "e8b488af-fccf-4adf-b60c-fc7455bea107",
+		"publisherId": "4534c4fe-f5e7-4c04-943b-3a6dad3e61dc",
+		"publisherDisplayName": "Emil Åström"
+	}
+}

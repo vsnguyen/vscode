@@ -1,0 +1,129 @@
+{
+	"name": "clojure",
+	"displayName": "Clojure",
+	"description": "Clojure nREPL support for Visual Studio Code",
+	"version": "0.9.1",
+	"publisher": "avli",
+	"author": {
+		"name": "Andrey Lisin",
+		"email": "andrey.lisin@gmail.com"
+	},
+	"contributors": [
+		{
+			"name": "Thiago Almeida",
+			"email": "fasfsfgs@gmail.com"
+		},
+		{
+			"name": "Mike Ball",
+			"email": "michaelhball@gmail.com"
+		},
+		{
+			"name": "Egor Yurtaev",
+			"email": "yurtaev.egor+github@gmail.com"
+		},
+		{
+			"name": "Mark Hansen",
+			"email": "mark@markhansen.co.nz"
+		},
+		{
+			"name": "Fabian Achammer",
+			"email": "fabian.achammer@gmail.com"
+		},
+		{
+			"name": "Nikita Prokopov",
+			"email": "prokopov@gmail.com"
+		},
+		{
+			"name": "Frederik Ring",
+			"email": "frederik.ring@gmail.com"
+		},
+		{
+			"name": "Alessandro Decina",
+			"email": "alessandro.d@gmail.com"
+		}
+	],
+	"license": "MIT",
+	"icon": "images/icon.png",
+	"engines": {
+		"vscode": "^1.14.0"
+	},
+	"categories": [
+		"Languages",
+		"Other"
+	],
+	"activationEvents": [
+		"onLanguage:clojure"
+	],
+	"main": "./out/src/clojureMain",
+	"contributes": {
+		"commands": [
+			{
+				"command": "clojureVSCode.eval",
+				"title": "Clojure: Eval"
+			},
+			{
+				"command": "clojureVSCode.evalAndShowResult",
+				"title": "Clojure: Eval and show the result"
+			},
+			{
+				"command": "clojureVSCode.manuallyConnectToNRepl",
+				"title": "Clojure: Connect to a running nREPL"
+			},
+			{
+				"command": "clojureVSCode.startNRepl",
+				"title": "Clojure: Start nREPL"
+			},
+			{
+				"command": "clojureVSCode.stopDisconnectNRepl",
+				"title": "Clojure: Stop/disconnect nREPL"
+			},
+			{
+				"command": "clojureVSCode.formatFile",
+				"title": "Clojure: Format file or selection"
+			}
+		],
+		"configuration": {
+			"type": "object",
+			"title": "Clojure extension configuration",
+			"properties": {
+				"clojureVSCode.autoStartNRepl": {
+					"type": "boolean",
+					"default": true,
+					"description": "Automatically run an embedded nREPL instance and connect to it on Clojure file open."
+				},
+				"clojureVSCode.formatOnSave": {
+					"type": "boolean",
+					"default": false,
+					"description": "Format the code on save."
+				}
+			}
+		}
+	},
+	"scripts": {
+		"vscode:prepublish": "tsc -p ./",
+		"compile": "tsc -watch -p ./",
+		"postinstall": "node ./node_modules/vscode/bin/install"
+	},
+	"devDependencies": {
+		"@types/jszip": "^0.0.31",
+		"@types/mocha": "^2.2.32",
+		"@types/node": "^6.0.85",
+		"mocha": "^2.3.3",
+		"typescript": "^2.4.2",
+		"vscode": "^1.0.0"
+	},
+	"dependencies": {
+		"bencoder": "^0.0.5",
+		"cross-spawn": "^5.1.0",
+		"jszip": "^3.1.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/avli/clojureVSCode"
+	},
+	"__metadata": {
+		"id": "353f8b4c-77be-4809-8e4f-0414612dad64",
+		"publisherId": "5a7cef8f-102e-4e2f-a13c-7c1fb7a780bc",
+		"publisherDisplayName": "Andrey Lisin"
+	}
+}

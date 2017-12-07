@@ -1,0 +1,45 @@
+
+
+
+// status bar
+vscode.window.createStatusBarItem
+atom (straight dom selector "status-bar div.status-bar-right")
+
+// dialogs
+atom.confirm
+atom.workspace.open file
+vscode.window.showInformationMessage
+
+// editors
+atom.workspace.getActiveTextEditor
+atom.workspace.getTextEditors
+vscode.window.activeTextEditor
+
+// event hooks
+atom.workspace.observeTextEditors editor
+atom.workspace.onDidChangeActivePaneItem pane-changed
+vscode.window.onDidChangeTextEditorSelection
+vscode.window.onDidChangeActiveTextEditor
+
+// command register
+vscode.commands.registerCommand
+  "parinfer.disable"
+  "parinfer.toggleMode"
+atom.commands.add "atom-workspace"
+  "parinfer:edit-file-extensions"
+  "parinfer:disable"
+  "parinfer:toggle-mode"
+
+
+// types
+vscode.TextEditor
+vscode.Position
+vscode.Range
+vscode.Selection
+vscode.ExtensionContext
+vscode.workspace
+vscode.TextDocumentChangeEvent
+vscode.TextEditorSelectionChangeEvent
+vscode.TextEditorSelectionChangeKind
+vscode.StatusBarAlignment
+vscode.StatusBarItem
